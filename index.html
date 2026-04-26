@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Мой Ежедневник PRO</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="datetime-display">
+            <div id="currentDate"></div>
+            <div id="currentTime"></div>
+        </div>
+
+        <div class="add-task">
+            <input type="text" id="taskText" placeholder="Что нужно сделать?">
+
+            <div class="input-group">
+                <input type="date" id="taskDate" step="2">
+                <input type="time" id="taskTime" step="1">
+            </div>
+
+            <select id="taskPriority">
+                <option value="1">⭐ Ежедневное (Шаблон)</option>
+                <option value="2">📝 Плюс новое (каждый день)</option>
+                <option value="3">🚨 Срочное (В любое время)</option>
+                <option value="4">📅 План (на какойта х день)</option>
+            </select>
+            <button onclick="addTask()">Добавить в список</button>
+        </div>
+
+        <div class="lists">
+            <section>
+                <h2>⭐ Ежедневное</h2>
+                <ul id="list-1"></ul>
+            </section>
+            <section>
+                <h2>📝 Плюс новое</h2>
+                <ul id="list-2"></ul>
+            </section>
+            <section>
+                <h2>🚨 Срочное</h2>
+                <ul id="list-3"></ul>
+            </section>
+            <section>
+                <h2>📅 План</h2>
+                <ul id="list-4"></ul>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

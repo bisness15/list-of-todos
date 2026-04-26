@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 10px;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+h1 { text-align: center; color: #333; }
+
+/* Форма добавления */
+.add-task {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.add-task input, .add-task select, .add-task button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1 1 150px;
+}
+.add-task button {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Списки */
+.lists {
+    display: grid;
+    grid-template-columns: 1fr; /* По умолчанию для мобилок */
+    gap: 20px;
+}
+@media (min-width: 600px) {
+    .lists { grid-template-columns: 1fr 1fr 1fr; } /* Для ПК в 3 колонки */
+}
+
+section { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+h2 { font-size: 1.1rem; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+ul { list-style: none; padding: 0; }
+
+/* Элемент списка */
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #fafafa;
+}
+.task-done { text-decoration: line-through; color: gray; }
+/* .time-tag { font-size: 0.8rem; background: #eee; padding: 2px 5px; border-radius: 4px; margin-right: 5px; } */
+
+/* Добавьте это к предыдущему CSS */
+.datetime-display {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+#currentDate { font-size: 1.2rem; opacity: 0.9; }
+#currentTime { font-size: 2.5rem; font-weight: bold; font-family: monospace; }
+
+.input-group {
+    display: flex;
+    gap: 5px;
+    flex: 1 1 200px;
+}
+
+.date-tag, .time-tag {
+    color: #d9534f;
+    font-weight: bold;
+    display: block;
+    font-family: monospace
+}
+
+@media (min-width: 900px) {
+    .lists { grid-template-columns: repeat(4, 1fr); }
+}
+
